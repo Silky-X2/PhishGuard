@@ -26,7 +26,7 @@ Coming soon...
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/Silky-X2/SnapNote.git
+git clone https://github.com/Silky-X2/PhishGuard.git
 ```
 
 2. Open the project folder:
