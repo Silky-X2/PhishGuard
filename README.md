@@ -1,4 +1,4 @@
-# PhyshGuard
+# PhishGuard
 
 PhishGuard is a basic and easy to run Python tool 
 that analyzes URLs and estimates whether 
@@ -32,7 +32,7 @@ git clone https://github.com/Silky-X2/PhishGuard.git
 2. Open the project folder:
 
 ```bash
-cd snaptask
+cd PhishGuard
 ```
 
 3. Run in Terminal (python required)
