@@ -6,11 +6,11 @@
 
 ## Features
 
-* Https Check
-* suspicious keywords detection 
+* Https check
+* Suspicious keywords detection 
 * URL lengt analyser
 * Simpel Ranking System (Low/Mid/High) 
-
+* SubDomains check
 ---
 
 ## Demo
@@ -48,7 +48,7 @@ Comming Soon...
 
 ## Future Improvements
 
-* appoved URLs
+* approved URLs
 * Webside
 
 ---
