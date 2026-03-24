@@ -1,6 +1,8 @@
 # PhyshGuard
 
-
+PhishGuard is a basic and easy to run Python tool 
+that analyzes URLs and estimates whether 
+they might be suspicious or potentially phishing-related.
 
 ---
 
