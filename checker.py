@@ -18,18 +18,18 @@ def analyze_url(url):
     domain = parsed.netloc
     path = parsed.path
 
-    # 1. URL length
+    # URL length
     if len(url) > 75:
         score += 2
         reasons.append("URL is very long")
 
-    # 2. Subdomains check
+    # Subdomains check
     subdomains = domain.split(".")
     if len(subdomains) > 3:
         score += 2
         reasons.append("Found many Subdomains")
 
-    # 3. Suspicious words check 
+    # Suspicious words check 
     full_text = domain + path
     for word in SUSPICIOUS_WORDS:
         if word in full_text.lower():
@@ -41,7 +41,7 @@ def analyze_url(url):
         score += 1
         reasons.append("Numbers in Domain")
 
-    # 5. HTTPS check
+    # HTTPS check
     if parsed.scheme != "https":
         score += 1
         reasons.append("No HTTPS")
