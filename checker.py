@@ -10,7 +10,7 @@ def analyze_url(url):
     score = 0
     reasons = []
 
-    # Add scheme if missing
+    # Add scheme
     if not url.startswith("http"):
         url = "http://" + url
 
@@ -21,30 +21,30 @@ def analyze_url(url):
     # 1. URL length
     if len(url) > 75:
         score += 2
-        reasons.append("URL ist sehr lang")
+        reasons.append("URL is very long")
 
     # 2. Subdomains check
     subdomains = domain.split(".")
     if len(subdomains) > 3:
         score += 2
-        reasons.append("Viele Subdomains erkannt")
+        reasons.append("Found many Subdomains")
 
-    # 3. Suspicious words
+    # 3. Suspicious words check 
     full_text = domain + path
     for word in SUSPICIOUS_WORDS:
         if word in full_text.lower():
             score += 2
-            reasons.append(f"Verdächtiges Wort gefunden: '{word}'")
+            reasons.append(f"Suspicious word found: '{word}'")
 
-    # 4. Numbers in domain (often phishing)
+    # Numbers in domain check
     if re.search(r"\d", domain):
         score += 1
-        reasons.append("Zahlen im Domainnamen")
+        reasons.append("Numbers in Domain")
 
     # 5. HTTPS check
     if parsed.scheme != "https":
         score += 1
-        reasons.append("Kein HTTPS")
+        reasons.append("No HTTPS")
 
     # Risk level
     if score <= 2:
